@@ -1,0 +1,168 @@
+(base) ]0;~/final-website/FlexStart[01;34m~/final-website/FlexStart[00m$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone             Clone a repository into a new directory
+   init              Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add               Add file contents to the index
+   mv                Move or rename a file, a directory, or a symlink
+   restore           Restore working tree files
+   rm                Remove files from the working tree and from the index
+   sparse-checkout   Initialize and modify the sparse-checkout
+
+examine the history and state (see also: git help revisions)
+   bisect            Use binary search to find the commit that introduced a bug
+   diff              Show changes between commits, commit and working tree, etc
+   grep              Print lines matching a pattern
+   log               Show commit logs
+   show              Show various types of objects
+   status            Show the working tree status
+
+grow, mark and tweak your common history
+   branch            List, create, or delete branches
+   commit            Record changes to the repository
+   merge             Join two or more development histories together
+   rebase            Reapply commits on top of another base tip
+   reset             Reset current HEAD to the specified state
+   switch            Switch branches
+   tag               Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch             Download objects and refs from another repository
+   pull              Fetch from and integrate with another repository or a local branch
+   push              Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+(base) ]0;~/final-website/FlexStart[01;34m~/final-website/FlexStart[00m$ ls
+[0m[01;31mAIwebsite.zip[0m  Readme.txt  [01;34massets[0m  blog.html  changelog.txt  container.ipynb  [01;34mforms[0m  [01;31mfullAIsite.zip[0m  index.html  inner-page.html  knn.html  logregression.html  nbayes.html  portfolio-details.html  rfc.html  svm.html  terminal.term  [01;34mvishtml[0m  xgb.html
+(base) ]0;~/final-website/FlexStart[01;34m~/final-website/FlexStart[00m$ git remote -v
+origin	https://github.com/katherinevo/SC22-BatchB-parallel-processing.git (fetch)
+origin	https://github.com/katherinevo/SC22-BatchB-parallel-processing.git (push)
+(base) ]0;~/final-website/FlexStart[01;34m~/final-website/FlexStart[00m$ (base) ]0;~/final-website/FlexStart[01;34m~/final-website/FlexStart[00m$ 
+(base) ]0;~/final-website/FlexStart[01;34m~/final-website/FlexStart[00m$ 
+(base) ]0;~/final-website/FlexStart[01;34m~/final-website/FlexStart[00m$ 
+(base) ]0;~/final-website/FlexStart[01;34m~/final-website/FlexStart[00m$ 
+(base) ]0;~/final-website/FlexStart[01;34m~/final-website/FlexStart[00m$ ls
+[0m[01;31mAIwebsite.zip[0m  [01;34massets[0m     changelog.txt    [01;34mforms[0m           index.html       knn.html            nbayes.html             rfc.html  terminal.term  xgb.html
+Readme.txt     blog.html  container.ipynb  [01;31mfullAIsite.zip[0m  inner-page.html  logregression.html  portfolio-details.html  svm.html  [01;34mvishtml[0m
+(base) ]0;~/final-website/FlexStart[01;34m~/final-website/FlexStart[00m$ [K(base) ]0;~/final-website/FlexStart[01;34m~/final-website/FlexStart[00m$ git remote set-url origin https://github.com/AsadShahid04/Parallel_Processing_Website.git
+(base) ]0;~/final-website/FlexStart[01;34m~/final-website/FlexStart[00m$ git remote -v
+origin	https://github.com/AsadShahid04/Parallel_Processing_Website.git (fetch)
+origin	https://github.com/AsadShahid04/Parallel_Processing_Website.git (push)
+(base) ]0;~/final-website/FlexStart[01;34m~/final-website/FlexStart[00m$ git commit [K[Kgit add[K[K[Kgit status
+On branch main
+Your branch is ahead of 'origin/main' by 5 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	[31mmodified:   ../../Asad/week1/.EDA_mini_project.ipynb.sage-jupyter2[m
+	[31mmodified:   ../../Asad/week1/.Exploratory_Data_Notebook.ipynb.sage-jupyter2[m
+	[31mmodified:   ../../Asad/week1/.intro_to_python.ipynb.sage-jupyter2[m
+	[31mmodified:   ../../Asad/week1/EDA_mini_project.ipynb[m
+	[31mmodified:   ../../Asad/week1/Exploratory_Data_Notebook.ipynb[m
+	[31mmodified:   ../../Asad/week2/linear_regression_numpy.ipynb[m
+	[31mmodified:   ../../Asad/week2/linear_regression_sklearn_on_own_data.ipynb[m
+	[31mmodified:   ../../Engoron/ML/.KNN ML Model.ipynb.sage-jupyter2[m
+	[31mmodified:   ../../Engoron/ML/KNN ML Model.ipynb[m
+	[31mmodified:   ../../Engoron/week2/.Cancer_detection.ipynb.sage-jupyter2[m
+	[31mmodified:   ../../Engoron/week2/.linear_regression_sklearn_on_own_data.ipynb.sage-jupyter2[m
+	[31mmodified:   ../../Jayden/week2/.Cancer_detection.ipynb.sage-jupyter2[m
+	[31mmodified:   ../../Jayden/week2/.starting_machine_learning_training_fraud.ipynb.sage-jupyter2[m
+	[31mmodified:   ../../Rena/week2/linear_regression_numpy.ipynb[m
+	[31mmodified:   ../../Rena/week2/linear_regression_sklearn_on_own_data.ipynb[m
+	[31mmodified:   ../../Shruti/week1/.EDA_mini_project.ipynb.sage-jupyter2[m
+	[31mmodified:   ../../Shruti/week2/linear_regression_numpy.ipynb[m
+	[31mmodified:   ../../Shruti/week2/linear_regression_sklearn_on_own_data.ipynb[m
+	[31mmodified:   ../../William/week1/.EDA_mini_project.ipynb.sage-jupyter2[m
+	[31mmodified:   ../../William/week2/linear_regression_numpy.ipynb[m
+	[31mmodified:   ../../William/week2/linear_regression_sklearn_on_own_data.ipynb[m
+	[31mmodified:   ../../William/week3/discord_bot_lesson.ipynb[m
+	[31mmodified:   ../../project/.EDA-no-output.ipynb.sage-jupyter2[m
+	[31mmodified:   ../../project/.pls work.ipynb.sage-jupyter2[m
+	[31mmodified:   ../../project/EDA-no-output.ipynb[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	[31m../../.2022-06-27-214213.term-0.term[m
+	[31m../../.bash_profile[m
+	[31m../../.bashrc[m
+	[31m../../.cache/[m
+	[31m../../.conda/[m
+	[31m../../.gitconfig[m
+	[31m../../.ipython/[m
+	[31m../../.jupyter-blobs-v0.db[m
+	[31m../../.jupyter/[m
+	[31m../../.local/[m
+	[31m../../.npm/[m
+	[31m../../.pki/[m
+	[31m../../.smc/[m
+	[31m../../2022-06-27-214213.term[m
+	[31m../../Asad/week2/.Cancer_detection.ipynb.sage-jupyter2[m
+	[31m../../Asad/week2/.SVM Model.ipynb-0-jupyter.term[m
+	[31m../../Asad/week2/.SVM Model.ipynb.sage-jupyter2[m
+	[31m../../Asad/week2/.linear_regression_numpy.ipynb.sage-jupyter2[m
+	[31m../../Asad/week2/.linear_regression_sklearn_on_own_data.ipynb.sage-jupyter2[m
+	[31m../../Asad/week2/Cancer_detection.html[m
+	[31m../../Asad/week2/Cancer_detection.ipynb[m
+	[31m../../Asad/week2/Cancer_detection.pdf[m
+	[31m../../Asad/week2/Data Folder/[m
+	[31m../../Asad/week2/HTML Demos[m
+	[31m../../Asad/week2/SVM Model.html[m
+	[31m../../Asad/week2/SVM Model.ipynb[m
+	[31m../../Asad/week2/SVM Model.pdf[m
+	[31m../../Asad/week2/confusion_matrix_SVM.html[m
+	[31m../../Asad/week2/demo.html[m
+	[31m../../Engoron/HTML_Demos/[m
+	[31m../../Engoron/ML/.Visualization Transfer.ipynb.sage-jupyter2[m
+	[31m../../Engoron/ML/Visualization Transfer.ipynb[m
+	[31m../../Jayden/week3/2022-07-11-101730/[m
+	[31m../../Miniconda3-latest-Linux-x86_64.sh[m
+	[31m../../Rena/week2/.Cancer_detection.ipynb.sage-jupyter2[m
+	[31m../../Rena/week2/.linear_regression_numpy.ipynb.sage-jupyter2[m
+	[31m../../Rena/week2/.linear_regression_sklearn_on_own_data.ipynb.sage-jupyter2[m
+	[31m../../Rena/week2/Cancer_detection.ipynb[m
+	[31m../../Shruti/.HTML Demo.ipynb.sage-jupyter2[m
+	[31m../../Shruti/HTML Demo.ipynb[m
+	[31m../../Shruti/HTML Demo/[m
+	[31m../../Shruti/week2/.Cancer_detection.ipynb.sage-jupyter2[m
+	[31m../../Shruti/week2/.linear_regression_numpy.ipynb.sage-jupyter2[m
+	[31m../../Shruti/week2/.linear_regression_sklearn_on_own_data-copy.ipynb.sage-jupyter2[m
+	[31m../../Shruti/week2/.linear_regression_sklearn_on_own_data.ipynb.sage-jupyter2[m
+	[31m../../Shruti/week2/Cancer_detection.ipynb[m
+	[31m../../Shruti/week2/Dataset/[m
+	[31m../../Shruti/week2/linear_regression_sklearn_on_own_data-copy.ipynb[m
+	[31m../../William/week2/.Cancer_detection.ipynb.sage-jupyter2[m
+	[31m../../William/week2/.linear_regression_numpy.ipynb.sage-jupyter2[m
+	[31m../../William/week2/.linear_regression_sklearn_on_own_data.ipynb.sage-jupyter2[m
+	[31m../../William/week2/Cancer_detection.ipynb[m
+	[31m../../William/week2/Machine Learning/[m
+	[31m../../William/week3/.discord_bot_lesson.ipynb.sage-jupyter2[m
+	[31m../../William/week3/HTML Demo/[m
+	[31m../[m
+	[31m../../miniconda3/[m
+	[31m../../parallel web (wip).zip[m
+	[31m../../project/EDA-no-output.html[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) ]0;~/final-website/FlexStart[01;34m~/final-website/FlexStart[00m$ git commit -a [K[K[Kgit add . [K[K[K[K[K[Kssh -T git@github.com
+
+The authenticity of host 'github.com (192.30.255.113)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? √ç  çç  ^C
+(base) ]0;~/final-website/FlexStart[01;34m~/final-website/FlexStart[00m$ git config -l | grep user.name
+[01;31m[Kuser.name[m[K=katherinevo
+(base) ]0;~/final-website/FlexStart[01;34m~/final-website/FlexStart[00m$ 
+(base) ]0;~/final-website/FlexStart[01;34m~/final-website/FlexStart[00m$ 

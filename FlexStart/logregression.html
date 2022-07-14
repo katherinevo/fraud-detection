@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title> Binary Logistic Regression </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.9.0
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between" >
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/parallelprocessing.png" alt="">
+        <span></span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="index.html">Home</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        
+        <h2 style="text-align:center; backgroundColor: LightGray" >Binary Logistic Regression</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div>
+
+            <article class="entry entry-single">
+
+              <div class="entry-img">
+                <img src="https://miro.medium.com/max/1200/1*Jg8YrW8EyPRI8TsEEHsIlw.gif" alt="" class="img-fluid">
+              </div>
+
+              <h2 class="entry-title">
+<hr size='1'/>
+
+                Creating the Model
+              </h2>
+
+        
+
+              <div class="entry-content">
+                <p>
+                  For classification problems, it's hard to use linear regression to predict an accurate difference between two classes as it does not indicate a strict enough differentiation between the two. We use a steeper curve with logistic regression to create a more accurate classifier. 
+                   <br> The code to import a logistic regression model from the SKLearn library is as follows:
+                </p>
+                <blockquote>
+                  <p>
+                    from sklearn.linear_model import LogisticRegression
+                  </p>
+                </blockquote>
+                <h3>
+                  This sequential approach works in a small series of steps:</h3>
+
+               <img src = "https://miro.medium.com/max/1400/1*dm6ZaX5fuSmuVvM4Ds-vcg.jpeg"
+                    class = "img-fluid">
+                  <p>
+                    From here, predicting using Logistic Regression comes down to three elements: A predictor function, a cost function, and a threshold which acts as a hard divider between two classes. For our predictor, a Sigmoid function is used, as its characteristic S-like shape maps any real value into another value between 0 to 1. This function has a non-negative derivative at each point and exactly one inflection point, giving a clear indication of the difference between two classes (fraud or not fraud for example).
+                </p>
+                <p>
+                  The cost function in this case would work similarly to cost functions in many other models, such as boosting ensemble methods. For Binary Logistic Regression, we use the equation to help minimize loss. As the model is trained, decreasing the cost will increase the maximum likelihood, assuming that samples are drawn from an identically independent distribution.
+                </p>
+                  If you want to learn more about Logistic Regression, click the link here:
+                </p>
+                <a href = "https://towardsdatascience.com/how-is-logistic-regression-used-as-a-classification-algorithm-51eaf0d01a78">How Is Logistic Regression used as a Classification Algorithm?</a>
+                <h3>Our LogReg Experience</h3>
+                <h4>Data and Analysis</h4>
+                <p>
+                  Logistic Regression was the first model we trained as the Sigmoid approximation that it makes use of, seemed like a clear way to predict whether or not something was or wasn't fraud. It proved to be a good start, as it has a lack in abundance of hyperparameters, and was indeed a good fit for our problem, allowing this model to work with high accuracy and little fine tuning. It wasn't as accurate as some other models like RDF or Boosting, but it was still a consistent predictor.
+                </p>
+                <center>
+                  <object data="assets/img/confusion_matrix_logreg.html"
+                                          width="720"
+                                          height="620"
+                                          type="text/html">
+                  </object>
+              </center>
+<!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="0.99409" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Accuracy Score</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="0.56" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Precision Score</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-headset" style="color: #15be56;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="0.97" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Recall</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-people" style="color: #bb0852;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="0.96929" data-purecounter-duration="1" class="purecounter"></span>
+                <p>ROC AUC Score</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Counts Section -->
+               
+
+            </article><!-- End blog entry -->
+
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+ <!-- ======= Footer ======= -->
+ <footer id="footer" class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <img src="assets/img/logo.png" alt="">
+              <span>Parallel Processing</span>
+            </a>
+            <div class="social-links mt-3">
+              <a href="https://www.instagram.com/aicamp1/" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/ai-camp/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Introduction</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Exploratory Data Analysis</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Machine Learning</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Conclusion</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">About Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Parallel Processing</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

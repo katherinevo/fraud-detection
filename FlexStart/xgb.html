@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title> Extreme Gradient Boosting </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.9.0
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/parallelprocessing.png" alt="">
+        <span></span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="index.html">Home</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        
+        <h2 style="text-align:center;">Extreme Gradient Boosting</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div>
+
+            <article class="entry entry-single">
+
+              <div class="entry-img">
+                <center><img src="https://miro.medium.com/max/1400/1*QJZ6W-Pck_W7RlIDwUIN9Q.jpeg" alt="" class="img-fluid"></center>
+                
+              </div>
+
+              <h2 class="entry-title">
+                Creating the Model
+              </h2>
+
+        
+
+              <div class="entry-content">
+                <p>
+                  Similar to Random Forests, Extreme Gradient Boosting, or XGBoost, uses a string of decision trees in order to help make predictions. However, while RF models use bagging, selecting the most commonly chosen answer to be the best one overall, Boosting models like XGBoost, building new models sequentially in order to minimize the errors of both old and new attempts. <br> The code to import xg boost from the SKLearn library is as follows:
+                </p>
+                <blockquote>
+                  <p>
+                    from xgboost.sklearn import XGBClassifier
+                  </p>
+                </blockquote>
+                <h3>
+                  This sequential approach works in a small series of steps:</h3>
+               
+               <center>
+                 <img src = "https://miro.medium.com/max/922/1*A9myadIB_CqJv-EJA-G_bA.png">
+               </center>
+               
+                  <p>
+                    Individual tests are not strong enough to make an accurate predictions, they are called weak learners. A weak learner acts as a classifier that has less of a correlation with the actual value. Therefore, to make our predictions more accurate, we devise a model that combines weak learners’ predictions to make a strong learner, and this is done using the technique of boosting. 
+                    Since XGBoost uses Decision Trees as its weak learners, we can say that it is a Tree based learner. 
+                </p>
+                <p>
+                  We fist fit a first weak model using the original data, creating a single decision tree as a predictor. Then we create a residual model (prediction), proceeding to correct that model using a gradient descent algorithm to minimize a loss function, which should show a positive increase in performance from model to model. Loss normally means the difference between the predicted value and actual value. Based off of that loss function a new model is created from the sum of models 1 and 2 as follows. Capital F(i) represents the current model, F(i-1) is the previous model and small f(i) represents a weak model.
+                  </p>
+                <center><img src = "https://miro.medium.com/max/640/1*7hYKHchEKiSwybQXh0IeLg.png"></center>
+                
+                <p>
+                  For gradient boosting specifically, we use an algorithm called Gradient Descent, which iteratively optimizes the loss of the model by updating the weights of features. For classification problems, we use logarithmic loss calculations to make these predictions. In this case, w represents the weight vector, η is the learning rate
+                </p>
+                <center><img src = "https://miro.medium.com/max/640/1*EZXwcUstBokb9Cx0mMydxg.png">
+                </center>
+                
+                <p>
+                  If you want to learn more about Gradient Boosting, and what makes XGBoost's implementation so efficient, click the link here:
+                </p>
+                <a href = "https://medium.com/sfu-cspmp/xgboost-a-deep-dive-into-boosting-f06c9c41349">XGBoost: A Deep Dive into Boosting</a>
+                <h3>Our XGBoost Experience</h3>
+                <h4>Data and Analysis</h4>
+                <p>
+                  We found that XGBoost was our most accurate and reliable algorithm to use across multiple trials due to its high recall, precision and accuracy scores. All of our scores were high, but XGBoost was the most consistent, having the lowest error rate across multiple trials. This was especially apparent on the heat maps produced for the results of these trails (an example of which is pictured below). 
+                </p>
+                <center>
+                  <object data="assets/img/confusion_matrix_xgb.html"
+                                          width="720"
+                                          height="620"
+                                          type="text/html">
+                  </object>
+                </center>
+<!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="0.99984" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Accuracy Score</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="1.00" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Precision Score</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-headset" style="color: #15be56;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="0.92" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Recall</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-people" style="color: #bb0852;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="0.92857" data-purecounter-duration="1" class="purecounter"></span>
+                <p>ROC AUC Score</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Counts Section -->
+                <h4>Hyperparameter Tuning</h4>
+                <p>
+                  
+                </p>
+                <dl>
+                 <dt>learning_rate</dt>
+                    <dd> 
+                      In each boosting step, this values shrinks the weight of new features, preventing overfitting or a local minimum. This value must be between 0 and 1. The default value is 0.3. - We set our learning rate to be 0.1
+                    </dd>
+                 <dt>max_depth</dt>
+                   <dd>The maximum depth of a tree. The greater the depth, greater the complexity of the model and more easy to overfit. This value must be an integer greater than 0 and have 6 as default - we kept it at 6.</dd>
+                 <dt>n_estimators</dt>
+                   <dd>The number of trees in our ensemble. - set to be default (100)</dd>
+                  <dt>colsample_bytree</dt>
+                   <dd>Represents the fraction of columns to be subsampled. It’s related to the speed of the algorithm and prevent overfitting. Default value is 1 but it can be any number between 0 and 1. - We set it to 0.7</dd>
+                  <dt>gamma</dt>
+                   <dd>A regularization term and it’s related to the complexity of the model. It’s the minimum loss necessary to occur a split in a leaf. It can be any value greater than zero and has a default value of 0.</dd>
+                </dl>
+
+            </article><!-- End blog entry -->
+
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+<!-- ======= Footer ======= -->
+ <footer id="footer" class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <img src="assets/img/logo.png" alt="">
+              <span>Parallel Processing</span>
+            </a>
+            <div class="social-links mt-3">
+              <a href="https://www.instagram.com/aicamp1/" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/ai-camp/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Introduction</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Exploratory Data Analysis</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Machine Learning</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Conclusion</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">About Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Parallel Processing</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

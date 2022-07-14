@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>AI-Supported Credit Card Fraud Detection</title>
+  <meta content="" name="description">
+
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/tomnook.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.9.0
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/parallelprocessing.png" style ="max-height: 60px; width: auto;" alt="">
+        <span></span>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <style>font-size: 200px !important;</style>
+          <li><a class="nav-link scrollto active" href="#hero">Introduction</a></li>
+          <li><a class="nav-link scrollto" href="#values">EDA</a></li>
+          <li><a class="nav-link scrollto" href="#MachineLearning">Machine Learning</a></li>
+          <li><a class="nav-link scrollto" href="#testimonials">Conclusion</a></li>
+          <li><a class="nav-link scrollto" href="#team">About Us</a></li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+<style>
+  .button{
+          color: white;
+          background-color: #284bf9;
+          border: none;
+          padding: 15px 15px;
+          border-radius: 12px;
+          margin-top: 40px;
+          }
+  </style>
+  <!-- ======= Introduction ======= -->
+  <section id="hero" class="hero d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">
+            AI-Supported
+            <br>
+            Credit Card 
+            <br>
+            Fraud Detection
+          </h1>
+          <h2 data-aos="fade-up" data-aos-delay="400"> By the Parallel Processing team
+            <br> 
+            - AI Camp Data Science Batch B - 
+            <br>2022
+          </h2>
+          
+          
+            <form data-aos="fade-up" onclick="window.open('https://www.notion.so/Parallel-Processing-afca39985ff04e8eaeda5b07f190efad')">
+              <button class = "button" onclick="window.open('https://www.notion.so/Parallel-Processing-afca39985ff04e8eaeda5b07f190efad')" type="submit">Check out our Product Spec here!</button>
+            </form>
+          
+          <div data-aos="fade-up" data-aos-delay="600">
+          </div>
+        </div>
+        <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="assets/img/hero-img.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Introduction -->
+
+  <main id="main">
+    <!-- ======= Process Section ======= -->
+    <section id="values" class="values">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Our process</h2>
+          <p>
+             Use Machine Learning To
+            <br>
+            Identify a Fraudulent Bank Transaction 
+          </p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="box">
+              <img src="assets/img/values-1.png" class="img-fluid" alt="">
+              <h3>
+                Understand our Dataset
+              </h3>
+              <p> With Python, we used Pandas and visualization libraries to conduct an Exploratory Data Analysis (EDA) to find meaningful relationships in our data.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+            <div class="box">
+              <img src="assets/img/values-2.png" class="img-fluid" alt="">
+              <h3>Clean our Dataset and Find Correlations</h3>
+              <p> After preforming our EDA, we distilled our data set to six features and one target. Depending on our current sample, various rows were removed due to duplicates or NaN data.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
+            <div class="box">
+              <img src="assets/img/values-3.png" class="img-fluid" alt="">
+              <h3>Code Machine Learning Models and Produce Conclusions</h3>
+              <p>We split our data set and successfully trained it on ten different classification models supported by the Sci Kit Learn library, accurately creating a model to predict fraud in each.</p>
+            </div>
+          </div>
+          
+
+        </div>
+
+      </div>
+
+    </section><!-- End Values Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="6000000" data-purecounter-duration="1" data-purecounter-decimals ="0" class="purecounter"></span>
+                <p>Size of Original Data Set</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext" style="color: #ee6c20;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" data-purecounter-decimals ="0" class="purecounter"></span>
+                <p>Models</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-headset" style="color: #15be56;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="50" data-purecounter-duration="1" data-purecounter-decimals ="0" class="purecounter"></span>
+                <p>Hours Of Work</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-people" style="color: #bb0852;"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" data-purecounter-decimals ="0" class="purecounter"></span>
+                <p>Hard Workers</p>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </section><!-- End Counts Section -->
+
+    <!-- ======= Features Section ======= -->
+    <section id="features" class="features">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Features</h2>
+          <p>Features Used for Predictions</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <img src="assets/img/features.png" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+            <div class="row align-self-center gy-4">
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>amount</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>oldbalanceOrg</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>newbalanceOrig</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>oldbalanceDest</h3>
+                </div>
+              </div>
+              
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="500">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>newbalanceDest</h3>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+                <div class="feature-box d-flex align-items-center">
+                  <i class="bi bi-check"></i>
+                  <h3>type</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- / row -->
+
+        <!-- Feature Tabs -->
+        <div class="row feture-tabs" data-aos="fade-up">
+          <div class="col-lg-6">
+            <h3>Libraries used for conducting Exploratory Data Analysis</h3>
+
+            <!-- Tabs -->
+            <ul class="nav nav-pills mb-3">
+              <li>
+                <a class="nav-link" data-bs-toggle="pill" href="#tab1">Pandas</a>
+              </li>
+              <li>
+                <a class="nav-link" data-bs-toggle="pill" href="#tab2">Plotly</a>
+              </li>
+            </ul>
+            <!-- End Tabs -->
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+              <!-- Start Tab 2 Content -->
+              <div class="tab-pane fade show" id="tab1">
+                <p>With Python's data analysis library: Pandas, we read in our dataset with the "read_csv" method into a data frame. Afterwards, we manipulated our data frame to solely hold features relevant to our model learning.</p>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2"></i>
+                  <h4>Syntax</h4>
+                </div>
+                <p>import pandas as pd</p>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2"></i>
+                  <h4>Methods/Class Variables:</h4>
+                </div>
+                <ul>
+                  <li>pd.read_csv()</li>
+                  <li>df.head()</li>
+                  <li>df.info()</li>
+                  <li>df.drop()</li>
+                  <li>df.dropna()</li>
+                  <li>df.reset_index()</li>
+                  <li>df.columns</li>
+                  <li>df.dtypes</li>
+                </ul>
+              </div>
+              <!-- End Tab 2 Content -->
+              
+              <!-- Start Tab 3 Content -->
+              <div class="tab-pane fade show" id="tab2">
+                <p>Plotly express allows us to us to create multiple visualizations for representing different columns in our dataset.</p>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2"></i>
+                  <h4>Syntax</h4>
+                </div>
+                <p>import plotly.express as pt</p>
+                <div class="d-flex align-items-center mb-2">
+                  <i class="bi bi-check2"></i>
+                  <h4>Methods/Class Variables:</h4>
+                </div>
+                <ul>
+                  <li>pt.imshow()</li>
+                  <li>pt.histogram()</li>
+                  <li>pt.pie()</li>
+                  <li>pt.scatter()</li>
+                  <li>pt.density_heatmap()</li>
+                  <li>pt.imshow()</li>
+                  <li>pt.box</li>
+                </ul>
+              </div><!-- End Tab 3 Content -->
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <img src="assets/img/features-2.png" class="img-fluid" alt="">
+          </div>
+
+        </div><!-- End Feature Tabs -->
+      </div>
+
+    </section><!-- End Features Section -->
+    
+<!-- ======= Visualization Section ======= -->
+    <section id="portfolio" class="portfolio">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Visualizations</h2>
+          <p>What do you see in our data?</p>
+        </header>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-scatter">Scatter</li>
+              <li data-filter=".filter-histogram">Histogram</li>
+              <li data-filter=".filter-HeatMaps">Heat Maps</li>
+              <li data-filter=".filter-pie">Pie Charts</li>
+              <li data-filter=".filter-BoxPlots">Box Plots</li>
+            </ul>
+          </div>
+        </div>
+
+        
+        <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-scatter">
+            <div class="portfolio-wrap">
+              <iframe width = '300' height = '300' src="vishtml/scatter_OrigBal_After_v_OrigBal_Before.html">
+              </iframe>
+              <div class="portfolio-info">
+                <h4>Scatter Plot of Before and After Balance</h4>
+                <p>Scatter Plot for before and after balance of the sender</p>
+                <div class="portfolio-links">
+                  <a target = “_blank”  href="vishtml/scatter_OrigBal_After_v_OrigBal_Before.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-scatter">
+            <div class="portfolio-wrap">
+              <iframe width = '300' height = '300' src="vishtml/scatter1.html">
+              </iframe>
+              <div class="portfolio-info">
+                <h4>Scatter Plot of Before and After Balance Based on Transaction Type</h4>
+                <p>Scatter Plot for before and after balance of the sender based on transaction type</p>
+                <div class="portfolio-links">
+                  <a target = “_blank”  href="vishtml/scatter1.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-HeatMaps">
+            <div class="portfolio-wrap">
+              <iframe width = '300' height = '300' src="vishtml/correlation_heatmap_before.html">
+              </iframe>
+              <div class="portfolio-info">
+                <h4>Scatter Plot of Before and After</h4>
+                <p>Correlation Heatmap Before Removing Un-wanted Columns</p>
+                <div class="portfolio-links">
+                  <a target = “_blank”  href="vishtml/correlation_heatmap_before.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-scatter">
+            <div class="portfolio-wrap">
+              <iframe width = '300' height = '300' src="vishtml/scatter_plot_relation_fruad.html">
+              </iframe>
+              <div class="portfolio-info">
+                <h4>Scatter Plots of finding Frauds</h4>
+                <p>Scatter plot of the types of payments in relation to whether it is fraud or not</p>
+                <div class="portfolio-links">
+                  <a target = “_blank” target = “_blank” href="vishtml/scatter_plot_relation_fruad.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-HeatMaps">
+            <div class="portfolio-wrap">
+              <iframe width = "300" height = "300" src="vishtml/density_heatmap_isFruad.html">
+              </iframe>
+              <div class="portfolio-info">
+                <h4>Density Heatmap of isFraud</h4>
+                <p>A density heatmap of the isFruad column</p>
+                <div class="portfolio-links">
+                  <a target = “_blank”  href="vishtml/density_heatmap_isFruad.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-histogram">
+            <div class="portfolio-wrap">
+              <iframe width = '300' height = '300' src="vishtml/distr1.html">
+              </iframe>
+              <div class="portfolio-info">
+                <h4>Histogram of Transaction Types</h4>
+                <p>A histogram representing all the types of transactions made in the data set</p>
+                <div class="portfolio-links">
+                  <a target = “_blank”  href="vishtml/distr1.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-pie">
+            <div class="portfolio-wrap">
+              <iframe width = '300' height = '300' src="vishtml/pie_chart_payment_v_fraud_cases.html">
+              </iframe>
+              <div class="portfolio-info">
+                <h4>Pie Chart of Fraud Cases vs Payment Types</h4>
+                <p>A pie chart of types of payment related to all Fraud cases</p>
+                <div class="portfolio-links">
+                  <a target = “_blank”  href="vishtml/pie_chart_payment_v_fraud_cases.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+         <div class="col-lg-4 col-md-6 portfolio-item filter-scatter">
+            <div class="portfolio-wrap">
+              <iframe width = '300' height = '300' src="vishtml/scatter_plot_fraud_transactions.html">
+              </iframe>
+              <div class="portfolio-info">
+                <h4>Pie Chart Types of Transactions</h4>
+                <p>A pie chart of all the types of transactions</p>
+                <div class="portfolio-links">
+                  <a target = “_blank”  href="vishtml/scatter_plot_fraud_transactions.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>  
+          
+           <div class="col-lg-4 col-md-6 portfolio-item filter-BoxPlots">
+            <div class="portfolio-wrap">
+              <iframe width = '300' height = '300' src="vishtml/boxplot_amount_transcation.html">
+              </iframe>
+              <div class="portfolio-info">
+                <h4>Box Plot of Amount Transactions</h4>
+                <p>a box plot of the amount of all the transactions</p>
+                <div class="portfolio-links">
+                  <a target = "_blank"  href="vishtml/boxplot_amount_transcation.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 portfolio-item filter-BoxPlots">
+            <div class="portfolio-wrap">
+              <iframe width = '300' height = '300' src="vishtml/scattermatrix.html">
+              </iframe>
+              <div class="portfolio-info">
+                <h4>Scatter Matrix of Amount for Destination</h4>
+                <p>A scatter matrix of the amount, oldbalanceDest, and newbalanceDest.</p>
+                <div class="portfolio-links">
+                  <a target = "_blank"  href="vishtml/scattermatrix.html" title="More Details"><i class="bi bi-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section><!-- End Portfolio Section -->
+    
+    <!-- ======= Machine Learning Section ======= -->
+    <section id="MachineLearning" class="MachineLearning">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Machine Learning Models</h2>
+          <p>The following are models we have used to train our dataset and conduct predictions</p>
+        </header>
+
+        <div class="row gy-4">
+          
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="MachineLearning-box blue">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Support Vector Models</h3>
+              <p>Support Vector Machines takes on a classification approach and the model is built on a multidimensional space which helps separate different classes. The objective is to segregate a data set into a hyperplane, and fit the data while having the highest margin.
+              </p>
+              <a href="svm.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="MachineLearning-box orange">
+              <i class="ri-discuss-line icon"></i>
+              <h3>K-Nearest Neighbors</h3>
+              <p>K-NN is a supervised Machine Learning algorithm that predicts similarity between new data and available data and can be  used for regression and classification.
+              </p>
+              <a href="knn.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="MachineLearning-box green">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Random Forest Classification</h3>
+              <p>Random Forest creates decision trees on selected data, collects a prediction from each tree, and then selects the prediction with the most votes (occurrences) as the final prediction.
+              </p>
+              <a href="rfc.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="MachineLearning-box red">
+              <i class="ri-discuss-line icon"></i>
+              <h3>XGBoost</h3>
+              <p>Extreme Gradient Boosting, is a scalable, distributed gradient-boosted decision tree (GBDT) machine learning library. It provides parallel tree boosting and is the leading machine learning library for regression, classification, and ranking problems.
+              </p>
+              <a href="xgb.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="MachineLearning-box purple">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Logistic Regression</h3>
+              <p> A logistic regression model predicts a dependent variable (binary outcome) by analyzing the relationship between multiple independent variables.
+              </p>
+              <a href="logregression.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+            <div class="MachineLearning-box pink">
+              <i class="ri-discuss-line icon"></i>
+              <h3>Naive Bayes</h3>
+              <p>Naive Bayes is a classification model which calculates the probability of given class labels then finds the likelihood probability of each attribute. The model then repeatedly inputs these values into Bayes formula, choosing the class with the highest probability.
+              </p>
+              <a href="nbayes.html" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section><!-- End Machine Learning Section -->
+
+<span style='font-size:small'></span><span style='font-size:xx-small'></span><span style='font-size:small'></span>
+
+
+    <!-- ======= Conclusion Section ======= -->
+    <section id="testimonials" class="testimonials">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Conclusions</h2>
+          <p>What we got out of each model:</p>
+        </header>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  In general, many of these top machine learning models yielded very similar results with extremely high accuracies that the differences were pretty negligible. 
+                </p>
+                <div class="profile mt-auto">
+                  <img src="https://us.123rf.com/450wm/jabkitticha/jabkitticha1607/jabkitticha160700396/60094332-vector-trophy-cup-flat-icon.jpg?ver=6" class="testimonial-img" alt="">
+                  <h3>Overall Result</h3>
+                  <h4>Conclusion</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  The Support Vector Machine Learning model has an accuracy score of 0.99939984, roc_auc_score of 0.666666. SVM yielded 19,977 True Positives,0 False Positive, 12 True Negative, and 6 False Negative.  
+                </p>
+                <div class="profile mt-auto">
+                  <img src="https://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1526288453/index3_souoaz.png" class="testimonial-img" alt="">
+                  <h3>Support Vector Machine Learning</h3>
+                  <h4>Conclusion</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  K-Nearest-Neighbors has an accuracy score of 0.9994498624656164, roc_auc_score of 0.69444444. The model yielded 11 False Negatives, 7 True Negatives, and 19977 True Positives, and 0 False Positive.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="https://miro.medium.com/max/405/0*a3bVVcWFwWBUtZnc.png" class="testimonial-img" alt="">
+                  <h3>K-Nearest Neighbors</h3>
+                  <h4>Conclusion</h4>
+                </div>
+              </div>
+            </div>
+            <!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                   XGBoost has an accuracy score of 0.9998258345428157 and a roc_auc_score of 0.9285714285714286. The model yielded 3 False Negatives, 18 True Negatives, 17204 True Positives, and 0 False Positives.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="https://miro.medium.com/max/461/1*A9myadIB_CqJv-EJA-G_bA.png" class="testimonial-img" alt="">
+                  <h3>XGBoost</h3>
+                  <h4>Conclusion</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+             
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  The Random Forest Model has an accuracy score of around 0.999899 and a roc_auc_score of 0.972197. The model yielded 19,976 True Positives, 1 False Positive, 17 True Negative, and 1 False Negatives.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2020/02/rfc_vs_dt1.png" class="testimonial-img" alt="">
+                  <h3>Random Forest Classification</h3>
+                  <h4>Conclusion</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section>
+    <!-- End Conclusions Section -->
+    
+    
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+
+      <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+          <h2>Team</h2>
+          <p>Our hard working team</p>
+        </header>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/asad2.jpeg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://twitter.com/a1sadshahid"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.instagram.com/a1sad.shahid/"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/asad-shahid-9553a91b0/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Asad Shahid</h4>
+                <span>Technical Expert and GitHub Enjoyer</span>
+                <p>No Pressure, No Diamonds</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/engoron.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://www.instagram.com/engoooo/"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/in/engoron-lim-b65648219"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Engoron Lim</h4>
+                <span>Decision-Maker and Debugger</span>
+                <p>Corgi is love. Corgi is life.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/jayden.png" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://twitter.com/JCavanaghh"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.instagram.com/jcavanaghh/"><i class="bi bi-instagram"></i></a>
+                  <a href="www.linkedin.com/in/j-cavanagh-27b409245"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Jayden Cavanagh</h4>
+                <span>Graphic Designer and Project Manager</span>
+                <p>Avogadro's number 6.02214076 x 10<sup>23</sup>. Now why is the sky blue?</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/ray.jpeg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Ray Parikh</h4>
+                <span>Frontend Developer and Design Lover</span>
+                <p>An apple a day keeps anyone away if you throw it hard enough.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/shruti.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/shruti-vora-bb8471241/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Shruti Vora</h4>
+                <span>Data Dissection</span>
+                <p>Purpose Fuels Passion</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/william.jpeg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.instagram.com/williamxruan"><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>William Ruan</h4>
+                <span>Communications and Organizer</span>
+                <p>They said to follow my dreams, so I went back to sleep.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/kv.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a href="https://www.linkedin.com/in/katherineqvo/"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+              <div class="member-info">
+                <h4>Katherine Vo</h4>
+                <span>Instructor and Cal Academic Advisor</span>
+                <p>A Weighted Blanket is not enough, I need to be compressed into a .zip file</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- End Team Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+ <footer id="footer" class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <img src="assets/img/logo.png" alt="">
+              <span>Parallel Processing</span>
+            </a>
+            <div class="social-links mt-3">
+              <a href="https://www.instagram.com/aicamp1/" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/ai-camp/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Introduction</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Exploratory Data Analysis</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Machine Learning</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Conclusion</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">About Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Parallel Processing</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

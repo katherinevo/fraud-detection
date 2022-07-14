@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title> Random Forest Classification </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FlexStart - v1.9.0
+  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/parallelprocessing.png" alt="">
+        <span></span>
+        
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto " href="index.html">Home</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        
+        <h2>Random Forest Classification</h2>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Single Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+          <div>
+
+            <article class="entry entry-single">
+
+              <div class="entry-img">
+               
+              </div>
+
+              <h2 class="entry-title">
+                What is a Random Forest Classifier?
+              </h2>
+  
+              <div class="entry-content">
+                <p>
+                 Random Forest creates decision trees on selected data, collects a prediction from each tree, and then selects the prediction with the most votes (occurrences) as the final prediction. This process is shown clearly in the image below. 
+                </p>
+                
+                <img src="http://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1526467744/voting_dnjweq.jpg" alt="Chart Representing the Random Forest Classification Process" class="img-fluid" style="width:600px;height:350px;display: block; margin-left: auto; margin-right: auto; width: 50%;" >
+
+
+                
+              <h2 class='entry-title'>
+                Training the Model
+              </h2>
+
+                <p>
+                 We split our data 80-20 (train-test).  From sklearn we imported the Random Forest Classifier and created a gaussian classifier where we tuned the hyperparameter, n_estimators (the number of trees you want to build before taking the maximum voting). We set the value of n_estimators to 2 because the accuracy remained the same when we had more than 2 n_estimators. We trained our model using the .fit() method from sklearn.
+                </p>
+                <blockquote>
+                  <p>
+                    from sklearn.ensemble import RandomForestClassifier
+                  </p>
+                </blockquote>
+
+              <h2 class='entry-title'>
+                Testing the Model/ Results
+              </h2>
+              
+                
+                
+                <p>
+                 After training our model we checked the accuracy of our model by using metrics.accuracy_score from sklearn and we got an accuracy of 0.999899. To visualize the performance of our classification algorithm we made a confusion matrix. From our confusion matrix, we found out that from the predictions 19,976 True Positives, 1 False Positive, 17 True Negative, and 1 False Negatives.There were only 2 mistakes made by the model, which explains our high accuracy score. The classification report also reflects our high accuracy score.
+                </p>
+                
+                <blockquote>
+                  <p>
+                    metrics.accuracy_score=0.999899
+                    metrics.roc_auc_score=0.972197
+                  </p>
+                </blockquote>
+                <h4>
+                  Confusion Matrix
+                </h4>
+            
+               <img src='assets/img/rfcconfusionmatrix.png' class="img-fluid" alt="" style="width:600px;height:350px;display: block; margin-left: auto; margin-right: auto; width: 50%;">
+            
+
+                <p>
+                  
+                  
+                </p>
+                <h4>
+                  Classification Report
+                </h4>
+                <img src= 'assets/img/rfcclassificationreport.png' class="img-fluid" alt="" style="width:600px;height:200px;display: block; margin-left: auto; margin-right: auto; width: 50%;">
+
+
+            </article><!-- End blog entry -->
+
+
+          </div><!-- End blog sidebar -->
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Single Section -->
+
+  </main><!-- End #main -->
+<!-- ======= Footer ======= -->
+ <footer id="footer" class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <img src="assets/img/logo.png" alt="">
+              <span>Parallel Processing</span>
+            </a>
+            <div class="social-links mt-3">
+              <a href="https://www.instagram.com/aicamp1/" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/ai-camp/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Introduction</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Exploratory Data Analysis</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Machine Learning</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Conclusion</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html">About Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Parallel Processing</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/flexstart-bootstrap-startup-template/ -->
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
